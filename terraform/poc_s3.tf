@@ -24,8 +24,8 @@ resource "aws_s3_bucket_notification" "poc_s3_bucket_notification" {
   }
 
   depends_on = [
-    aws_lambda_function.poc_lambda_folder_1,
-    aws_lambda_function.poc_lambda_folder_2,
-    aws_lambda_function.poc_lambda_folder_3,
+    aws_lambda_permission.allow_s3_bucket_to_lambda_f1,
+    aws_lambda_permission.allow_s3_bucket_to_lambda_f2,
+    aws_lambda_permission.allow_s3_bucket_to_lambda_f3,
   ]
 }
